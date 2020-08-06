@@ -19,7 +19,24 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    let maxValue = 0;
+    if ( this.items.length != 0){
+      for (let i = 0; i < this.items.length; i++){
+        if(this.items[i] > maxValue){
+          maxValue = this.items[i];
+          
+        }
+        
+      }
+      return maxValue;
+    } else {
+      throw new Error("EmptySortedList");
+    }
+
+    
+    
+  }
 
   min() {}
 
