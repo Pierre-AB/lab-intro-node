@@ -20,9 +20,9 @@ class SortedList {
   }
 
   max() {
-    let maxValue = 0;
-    if (this.items.length != 0) {
-      for (let i = 0; i < this.items.length; i++) {
+    let maxValue = this.items[0];
+    if (this.length != 0) {
+      for (let i = 1; i < this.length; i++) {
         if (this.items[i] > maxValue) {
           maxValue = this.items[i];
         }
@@ -34,11 +34,11 @@ class SortedList {
   }
 
   min() {
-    if (this.items.length != 0) {
-      let minValue = 0;
-      for (let i = this.items.length - 1; i === 0; i--) {
+    if (this.length != 0) {
+      let minValue = this.items[0];
+      for (let i = 1; i < this.length; i++) {
         if (this.items[i] < minValue) {
-          minValue = this.items[i];
+          maxValue = this.items[i];
         }
       }
       return minValue;
