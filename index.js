@@ -47,9 +47,22 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    if (this.items.length != 0) {
+      return this.items.reduce((acc, crt) => {
+        return acc + crt;
+      }, 0);
+    } else {
+      return 0;
+    }
+  }
 
-  avg() {}
+  avg() {
+    if (this.items.length != 0) {
+      return this.sum() / this.items.length;
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 }
-
 module.exports = SortedList;
